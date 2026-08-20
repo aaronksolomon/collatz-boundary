@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Boundary factorization and plateau complexity for hypothetical Collatz parity cycles: paper, figures, and exact computational companion.">
+    <meta property="og:title" content="Boundary Factorization and Plateau Complexity for Collatz Parity Cycles">
+    <meta property="og:description" content="A research preprint by Aaron Kyle Solomon with an exact computational companion.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://aaronksolomon.github.io/collatz-boundary/">
+    <meta property="og:image" content="https://aaronksolomon.github.io/collatz-boundary/assets/canonical-bridge.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Collatz Boundary — Aaron Kyle Solomon</title>
+    <link rel="stylesheet" href="assets/site.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="Collatz Boundary home">CB</a>
+      <nav aria-label="Primary navigation">
+        <a href="#paper">Paper</a>
+        <a href="#coordinates">Coordinates</a>
+        <a href="#companion">Code</a>
+        <a href="https://github.com/aaronksolomon/collatz-boundary">GitHub</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow">Research preprint · Number theory</p>
+          <h1>Boundary Factorization and Plateau Complexity for Collatz Parity Cycles</h1>
+          <p class="dek">
+            An exact coordinate system turns the geometry of a parity pattern
+            into a sparse polynomial boundary—and makes integrality impose a
+            quantitative complexity obstruction.
+          </p>
+          <p class="author">
+            <span>Aaron Kyle Solomon</span>
+            <a href="mailto:aaron@deerparkmonastery.org">aaron@deerparkmonastery.org</a>
+          </p>
+          <div class="actions">
+            <a class="button primary" href="paper/collatz-boundary-paper.pdf">Read the paper <span aria-hidden="true">↗</span></a>
+            <a class="button secondary" href="#companion">Reproduce the example</a>
+          </div>
+          <p class="status">Preprint · August 2026 · 52 pages · Not yet peer reviewed</p>
+        </div>
+
+        <aside class="result-card" aria-labelledby="main-result-title">
+          <p class="card-label" id="main-result-title">Asymptotic plateau complexity</p>
+          <div class="display-math" aria-label="K of L sub j is at least square root of log base 2 of 3 minus little o of 1, times square root of u sub j">
+            K(L<sub>j</sub>) ≥ (√log<sub>2</sub>3 − o(1))√u<sub>j</sub>
+          </div>
+          <p>
+            Along any sequence of hypothetical coprime positive cycles with
+            <i>u</i> → ∞. A large cycle cannot have <i>o</i>(√<i>u</i>)
+            residue-order plateaux.
+          </p>
+        </aside>
+      </section>
+
+      <section class="abstract section" id="paper" aria-labelledby="abstract-title">
+        <div class="section-heading">
+          <p class="eyebrow">The paper</p>
+          <h2 id="abstract-title">Abstract</h2>
+        </div>
+        <div class="abstract-text">
+          <p>
+            This paper studies how integrality constrains the shape of parity
+            patterns for hypothetical cycles of the shortcut Collatz map. A
+            binary parity word of length <i>n</i> with <i>u</i> odd symbols
+            determines a rational periodic orbit, but the standard numerator
+            formula does not reveal how the arrangement of those symbols
+            affects integrality. In the coprime cycle-relevant range, the odd
+            phases admit a lossless residue order. Each cyclic parity class
+            then has a unique rotation whose cumulative zero path lies below
+            the balanced mechanical path. Their nonnegative vertical
+            displacement is the <em>bridge</em> <i>L</i>.
+          </p>
+          <p>
+            Writing the bridge heights in residue order and taking a discrete
+            boundary produces a sparse polynomial <i>Q</i><sub>L</sub>. The
+            rational orbit is integral exactly when this boundary is divisible
+            by 2<i>X</i><sup>n−u</sup>−3 in
+            ℤ[<i>X</i>]/(<i>X</i><sup>u</sup>−2). Integrality therefore becomes
+            a tension between a sparse geometric boundary and a dense
+            arithmetic quotient. Competing 3-adic and dyadic estimates yield
+            the plateau-complexity bound above. The same coordinates recover
+            the mechanical-word exclusion and support a separate exclusion of
+            every singleton bridge candidate in the positive-denominator
+            range.
+          </p>
+          <div class="paper-links">
+            <a href="paper/collatz-boundary-paper.pdf">Download PDF</a>
+            <a href="#citation">Citation</a>
+            <span>arXiv record forthcoming</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section coordinates" id="coordinates" aria-labelledby="coordinates-title">
+        <div class="section-heading">
+          <p class="eyebrow">The construction</p>
+          <h2 id="coordinates-title">From parity word to sparse boundary</h2>
+          <p>
+            Four exact transformations separate cyclic ambiguity, geometric
+            displacement, arithmetic position, and boundary complexity.
+          </p>
+        </div>
+
+        <ol class="coordinate-chain">
+          <li>
+            <span class="step-number">01</span>
+            <h3>Canonical bridge</h3>
+            <p>Root the cyclic word uniquely below its balanced mechanical reference and record the vertical displacement <i>L</i>.</p>
+          </li>
+          <li>
+            <span class="step-number">02</span>
+            <h3>Residue order</h3>
+            <p>Use <i>r</i><sub>t</sub>=(<i>n−u</i>)<i>t</i> mod <i>u</i> to place every odd phase on the arithmetic exponent scale.</p>
+          </li>
+          <li>
+            <span class="step-number">03</span>
+            <h3>Dyadic profile</h3>
+            <p>Convert reordered bridge heights into positive powers of two; constant height intervals become literal plateaux.</p>
+          </li>
+          <li>
+            <span class="step-number">04</span>
+            <h3>Sparse boundary</h3>
+            <p>Take the reduced discrete boundary in ℤ[<i>X</i>]/(<i>X</i><sup>u</sup>−2). Its support size is exactly the plateau count.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section example" aria-labelledby="example-title">
+        <div class="section-heading narrow">
+          <p class="eyebrow">Running example</p>
+          <h2 id="example-title">The row (8, 5, 3)</h2>
+          <p>
+            The mechanical reference word is <code>11011010</code>. The
+            canonically rooted comparison word <code>11101100</code> has bridge
+            <i>L</i>=(0,0,1,0,1,0).
+          </p>
+        </div>
+
+        <figure>
+          <img src="assets/canonical-bridge.png" width="2400" height="1000" loading="lazy" alt="The cumulative path of the rooted word 11101100 lies weakly below the mechanical path for the row n equals 8, u equals 5. Their vertical separation gives bridge heights zero, zero, one, zero, one, zero.">
+          <figcaption>
+            The mechanical path and the canonically rooted cumulative zero
+            path. Their exact vertical separation is the bridge.
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img src="assets/profile-boundary.png" width="2400" height="1000" loading="lazy" alt="The residue-ordered dyadic profile has coefficient values two, one, one, two, two and three constant intervals. Its reduced boundary has coefficients two, zero, one, zero, minus one.">
+          <figcaption>
+            Residue reordering gives the dyadic profile
+            <i>d</i>=(2,1,1,2,2) and boundary
+            <i>Q</i><sub>L</sub>=2+<i>X</i><sup>2</sup>−<i>X</i><sup>4</sup>,
+            with three occupied coefficients and three plateaux.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="section companion" id="companion" aria-labelledby="companion-title">
+        <div class="section-heading">
+          <p class="eyebrow">Exact companion</p>
+          <h2 id="companion-title">Reproduce the coordinates</h2>
+          <p>
+            A small standard-library Python package validates an already rooted
+            legal bridge and computes every displayed coordinate in the running
+            example. It does not search for cycles or silently canonicalize an
+            arbitrary word.
+          </p>
+        </div>
+
+        <div class="code-grid">
+          <div>
+            <h3>Run</h3>
+            <pre><code>git clone https://github.com/aaronksolomon/collatz-boundary.git
+cd collatz-boundary
+python -m pip install .
+collatz-boundary</code></pre>
+            <p class="code-note">
+              Python 3.12+ · standard library only · GPL-3.0-or-later
+            </p>
+          </div>
+          <div>
+            <h3>Verify</h3>
+            <pre><code>w=11101100
+N(w)=251
+integrally realizable=False
+r(t)=(0, 3, 1, 4, 2)
+H=(0, 1, 1, 0, 0)
+d=(2, 1, 1, 2, 2)
+coeff(Q_L)=(2, 0, 1, 0, -1)
+K(L)=3</code></pre>
+            <a class="text-link" href="https://github.com/aaronksolomon/collatz-boundary">Browse the source <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section citation" id="citation" aria-labelledby="citation-title">
+        <div class="section-heading">
+          <p class="eyebrow">Reference</p>
+          <h2 id="citation-title">Citation</h2>
+        </div>
+        <div class="citation-copy">
+          <p>
+            Aaron Kyle Solomon. “Boundary Factorization and Plateau Complexity
+            for Collatz Parity Cycles.” Preprint, 2026.
+          </p>
+          <p>
+            Stable arXiv and journal identifiers will be added here when
+            available. Repository metadata is also provided in
+            <a href="https://github.com/aaronksolomon/collatz-boundary/blob/main/CITATION.cff"><code>CITATION.cff</code></a>.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 Aaron Kyle Solomon. Article and scholarly content: all rights reserved.</p>
+      <p>Computational companion: <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU GPL v3 or later</a>.</p>
+    </footer>
+  </body>
+</html>

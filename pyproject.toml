@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "collatz-boundary"
+version = "0.1.0"
+description = "Exact computational companion for Collatz bridge and boundary coordinates"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "GPL-3.0-or-later"
+authors = [
+  { name = "Aaron Kyle Solomon", email = "aaron@deerparkmonastery.org" },
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Mathematics",
+]
+dependencies = []
+
+[project.scripts]
+collatz-boundary = "collatz_boundary.cli:main"
+
+[project.urls]
+Homepage = "https://aaronksolomon.github.io/collatz-boundary/"
+Repository = "https://github.com/aaronksolomon/collatz-boundary"
+
+[tool.setuptools.packages.find]
+where = ["src"]

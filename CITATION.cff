@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this paper or computational companion, please cite the paper."
+title: "Collatz Boundary: paper and computational companion"
+type: software
+version: 0.1.0
+date-released: 2026-08-19
+license: GPL-3.0-or-later
+authors:
+  - family-names: Solomon
+    given-names: Aaron Kyle
+    email: aaron@deerparkmonastery.org
+repository-code: "https://github.com/aaronksolomon/collatz-boundary"
+url: "https://aaronksolomon.github.io/collatz-boundary/"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Solomon
+      given-names: Aaron Kyle
+  title: "Boundary Factorization and Plateau Complexity for Collatz Parity Cycles"
+  year: 2026
+  notes: "Preprint"
