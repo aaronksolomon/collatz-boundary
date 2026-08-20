@@ -1,6 +1,6 @@
 cff-version: 1.2.0
-message: "If you use this paper or computational companion, please cite the paper."
-title: "Collatz Boundary: paper and computational companion"
+message: "If you discuss this manuscript or use its computational companion, please cite the manuscript."
+title: "Collatz Boundary: manuscript and computational companion"
 type: software
 version: 0.1.0
 date-released: 2026-08-19
@@ -18,4 +18,4 @@ preferred-citation:
       given-names: Aaron Kyle
   title: "Boundary Factorization and Plateau Complexity for Collatz Parity Cycles"
   year: 2026
-  notes: "Preprint"
+  notes: "Unpublished manuscript; no arXiv identifier assigned"

@@ -1,20 +1,21 @@
 # Collatz Boundary
 
-This repository accompanies the preprint **Boundary Factorization and Plateau
-Complexity for Collatz Parity Cycles** by Aaron Kyle Solomon.
+This repository accompanies the unpublished manuscript **Boundary
+Factorization and Plateau Complexity for Collatz Parity Cycles** by Aaron Kyle
+Solomon.
 
-The paper develops exact coordinates for prescribed Collatz parity patterns:
+The manuscript develops exact coordinates for prescribed Collatz parity patterns:
 a canonically rooted parity class is measured against a mechanical reference,
 reindexed by residues, and represented by a sparse polynomial boundary. The
 small computational companion here reproduces those constructions exactly.
 
-## Paper
+## Manuscript
 
 - [Project website](https://aaronksolomon.github.io/collatz-boundary/)
-- [Preprint PDF](https://aaronksolomon.github.io/collatz-boundary/paper/collatz-boundary-paper.pdf)
+- [Manuscript PDF](https://aaronksolomon.github.io/collatz-boundary/paper/collatz-boundary-paper.pdf)
 
-The manuscript is a preprint and has not undergone peer review. An arXiv link
-and journal metadata will be added when available.
+The manuscript is shared to invite scholarly review and obtain an arXiv
+endorsement. It is not yet on arXiv and has not undergone peer review.
 
 ## Reproduce the running example
 
@@ -26,7 +27,7 @@ python -m pip install .
 collatz-boundary
 ```
 
-The default command reconstructs the paper's `(n,u,z)=(8,5,3)` example from
+The default command reconstructs the manuscript's `(n,u,z)=(8,5,3)` example from
 the rooted bridge `L=(0,0,1,0,1,0)`. Machine-readable output is available with
 `collatz-boundary --json`.
 
@@ -37,7 +38,7 @@ python -m unittest discover -s tests -v
 python tools/check_site.py
 ```
 
-The companion demonstrates definitions and identities from the paper. It is
+The companion demonstrates definitions and identities from the manuscript. It is
 not a search for Collatz cycles and does not test the theorem asymptotically.
 
 ## Licensing
