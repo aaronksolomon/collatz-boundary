@@ -13,8 +13,8 @@ small computational companion here reproduces those constructions exactly.
 - [Project website](https://aaronksolomon.github.io/collatz-boundary/)
 - [Manuscript PDF](https://aaronksolomon.github.io/collatz-boundary/paper/collatz-boundary-paper.pdf)
 
-The manuscript is shared to invite scholarly review and obtain an arXiv
-endorsement. It is not yet on arXiv and has not undergone peer review.
+The manuscript is shared for scholarly review. It is not yet on arXiv and has
+not undergone peer review.
 
 ## Reproduce the running example
 
