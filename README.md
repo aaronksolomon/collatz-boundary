@@ -1,8 +1,7 @@
 # Collatz Boundary
 
-This repository accompanies the unpublished manuscript **Boundary
-Factorization and Plateau Complexity for Collatz Parity Cycles** by Aaron Kyle
-Solomon.
+This repository accompanies the unpublished manuscript **Polynomial
+Coordinates for Collatz Cycles** by Aaron Kyle Solomon.
 
 The manuscript develops exact coordinates for prescribed Collatz parity patterns:
 a canonically rooted parity class is measured against a mechanical reference,
