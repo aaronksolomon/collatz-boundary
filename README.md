@@ -1,6 +1,6 @@
 # Collatz Boundary
 
-This repository accompanies the unpublished manuscript **Polynomial
+This repository accompanies the unpublished manuscript **Polynomial Boundary
 Coordinates for Collatz Cycles** by Aaron Kyle Solomon.
 
 The manuscript develops exact coordinates for prescribed Collatz parity patterns:
