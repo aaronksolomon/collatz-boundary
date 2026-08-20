@@ -22,6 +22,8 @@ Python 3.12 or newer is required. The core package uses only the standard
 library.
 
 ```bash
+git clone https://github.com/aaronksolomon/collatz-boundary.git
+cd collatz-boundary
 python -m pip install .
 collatz-boundary
 ```
