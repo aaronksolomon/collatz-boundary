@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="An unpublished manuscript introducing polynomial coordinates and a plateau-complexity obstruction for hypothetical Collatz cycles, shared for scholarly review.">
+    <meta name="description" content="An unpublished working paper developing polynomial boundary coordinates and a plateau-complexity condition for hypothetical Collatz cycles.">
     <meta property="og:title" content="Polynomial Boundary Coordinates for Collatz Cycles">
     <meta property="og:description" content="An unpublished manuscript by Aaron Kyle Solomon, shared for scholarly review with an exact computational companion.">
     <meta property="og:type" content="article">
@@ -19,7 +19,8 @@
     <header class="site-header">
       <a class="site-title" href="#top">Polynomial boundary coordinates</a>
       <nav aria-label="Primary navigation">
-        <a href="#paper">Manuscript</a>
+        <a href="paper/collatz-boundary-paper.pdf">PDF</a>
+        <a href="#paper">Abstract</a>
         <a href="#coordinates">Coordinates</a>
         <a href="#companion">Code</a>
         <a href="https://github.com/aaronksolomon/collatz-boundary">GitHub</a>
@@ -29,38 +30,60 @@
     <main id="main">
       <section class="hero" id="top">
         <div class="hero-copy">
-          <p class="eyebrow">Unpublished manuscript · Number theory</p>
+          <p class="eyebrow">Working paper · Version 0.1.0 · 19 August 2026 · 52 pages · Unpublished · Not peer reviewed</p>
           <h1>Polynomial Boundary Coordinates for Collatz Cycles</h1>
           <p class="dek">
-            An exact coordinate system turns the geometry of a parity pattern
-            into a sparse polynomial boundary—and makes integrality impose a
-            quantitative complexity obstruction.
+            This manuscript develops polynomial boundary coordinates for
+            prescribed parity patterns of the shortcut Collatz map. Under the
+            standing coprime positive-cycle hypotheses, these coordinates give
+            an exact criterion for integral realizability and an asymptotic
+            lower bound on residue-order plateau complexity.
           </p>
           <p class="author">
-            <span>Aaron Kyle Solomon</span>
-            <a href="mailto:aaron@deerparkmonastery.org">aaron@deerparkmonastery.org</a>
+            <span><a href="mailto:aaron@deerparkmonastery.org">Aaron Kyle Solomon</a> · Independent researcher</span>
           </p>
           <div class="actions">
             <a class="button primary" href="paper/collatz-boundary-paper.pdf">Manuscript <span aria-hidden="true">↗</span></a>
             <a class="button secondary" href="#companion">Code example</a>
           </div>
-          <p class="status">Unpublished · August 2026 · 52 pages · Not peer reviewed</p>
         </div>
 
         <aside class="result-card" aria-labelledby="main-result-title">
-          <p class="card-label" id="main-result-title">Asymptotic plateau complexity</p>
-          <div class="display-math" aria-label="K of L is at least square root of log base 2 of 3 minus little o of 1, times square root of u">
-            K(L) ≥ (√log<sub>2</sub>3 − o(1))√u
+          <p class="card-label" id="main-result-title">Necessary asymptotic condition · Theorem 1.2</p>
+          <div class="display-math" aria-label="The limit inferior as j tends to infinity of K of L sub j divided by the square root of u sub j is at least the square root of log base 2 of 3">
+            lim inf<sub><i>j</i>→∞</sub>
+            <span class="math-fraction"><i>K</i>(<i>L</i><sub><i>j</i></sub>)/√<i>u</i><sub><i>j</i></sub></span>
+            ≥ √log<sub>2</sub>3
           </div>
           <p>
-            For a hypothetical positive cycle, <i>n</i> is its least period,
-            <i>u</i> its number of odd terms, and <i>L</i> its canonical
-            bridge; <i>K</i>(<i>L</i>) counts the residue-order plateaux. The
-            estimate applies when gcd(<i>n</i>,<i>u</i>)=1, asymptotically as
-            <i>u</i>→∞.
+            For every sequence of nontrivial positive Collatz cycles with least
+            periods <i>n</i><sub><i>j</i></sub>, odd-member counts
+            <i>u</i><sub><i>j</i></sub>, gcd(<i>n</i><sub><i>j</i></sub>,
+            <i>u</i><sub><i>j</i></sub>)=1, and
+            <i>u</i><sub><i>j</i></sub>→∞, the canonical bridges
+            <i>L</i><sub><i>j</i></sub> satisfy this bound.
+          </p>
+          <p>
+            Thus any sufficiently large cycle in the coprime regime would
+            require on the order of √<i>u</i> residue-order plateaux.
           </p>
         </aside>
       </section>
+
+      <aside class="scope-note" aria-labelledby="scope-title">
+        <h2 id="scope-title">Scope</h2>
+        <p>
+          Under <i>u</i>&lt;<i>n</i>&lt;2<i>u</i>,
+          2<sup><i>n</i></sup>&gt;3<sup><i>u</i></sup>, and
+          gcd(<i>n</i>,<i>u</i>)=1, integral realizability is reduced to
+          divisibility of the sparse boundary <i>Q</i><sub><i>L</i></sub> by
+          2<i>X</i><sup><i>n</i>−<i>u</i></sup>−3 in
+          ℤ[<i>X</i>]/(<i>X</i><sup><i>u</i></sup>−2). Along any sequence of
+          hypothetical nontrivial positive cycles in this coprime regime with
+          <i>u</i>→∞, Theorem 1.2 gives the stated asymptotic lower bound on
+          <i>K</i>(<i>L</i>)/√<i>u</i>.
+        </p>
+      </aside>
 
       <section class="abstract section" id="paper" aria-labelledby="abstract-title">
         <div class="section-heading">
@@ -74,24 +97,40 @@
             binary parity word of length <i>n</i> with <i>u</i> odd symbols
             determines a rational periodic orbit, but the standard numerator
             formula does not reveal how the arrangement of those symbols
-            affects integrality. In the coprime cycle-relevant range, the odd
-            phases admit a lossless residue order. Each cyclic parity class
-            then has a unique rotation whose cumulative zero path lies below
-            the balanced mechanical path. Their nonnegative vertical
-            displacement is the <em>bridge</em> <i>L</i>.
+            affects integrality. The construction is developed in the positive
+            cycle-relevant range <i>u</i>&lt;<i>n</i>&lt;2<i>u</i> and
+            2<sup><i>n</i></sup>&gt;3<sup><i>u</i></sup>. Under the additional
+            condition gcd(<i>n</i>,<i>u</i>)=1, the map
+            <i>t</i>↦(<i>n</i>−<i>u</i>)<i>t</i> mod <i>u</i> permutes the
+            <i>u</i> odd phases and places them in a lossless residue order.
+            Each cyclic parity class then has a unique rotation whose
+            cumulative zero path lies below the balanced mechanical path of
+            the corresponding upper-Christoffel representative. The
+            nonnegative vertical displacement between these paths is called
+            the <em>bridge</em> <i>L</i>. Writing its heights in residue order
+            and taking a discrete boundary produces a sparse polynomial
+            <i>Q</i><sub><i>L</i></sub> whose occupied coefficients are exactly
+            the <i>K</i>(<i>L</i>) plateaux of the reordered bridge.
           </p>
           <p>
-            Writing the bridge heights in residue order and taking a discrete
-            boundary produces a sparse polynomial <i>Q</i><sub>L</sub>. The
-            rational orbit is integral exactly when this boundary is divisible
-            by 2<i>X</i><sup>n−u</sup>−3 in
-            ℤ[<i>X</i>]/(<i>X</i><sup>u</sup>−2). Integrality therefore becomes
-            a tension between a sparse geometric boundary and a dense
-            arithmetic quotient. Competing 3-adic and dyadic estimates yield
-            the plateau-complexity bound above. The same coordinates recover
-            the mechanical-word exclusion and support a separate exclusion of
-            every singleton bridge candidate in the positive-denominator
-            range.
+            The rational orbit is integral exactly when
+            <i>Q</i><sub><i>L</i></sub> is divisible by
+            2<i>X</i><sup><i>n</i>−<i>u</i></sup>−3 in
+            ℤ[<i>X</i>]/(<i>X</i><sup><i>u</i></sup>−2). When this holds, the
+            profile quotient recovers the odd orbit, while the boundary
+            quotient occupies every residue position. Integrality therefore
+            becomes a tension between a sparse geometric boundary and a dense
+            arithmetic quotient: long boundary gaps force 3-adic growth, while
+            the bridge geometry gives a competing dyadic upper bound.
+            Combining these estimates yields
+            <i>K</i>(<i>L</i>)≥(√log<sub>2</sub>3−<i>o</i>(1))√<i>u</i>
+            along any sequence of hypothetical coprime positive cycles with
+            <i>u</i>→∞. Thus a large cycle cannot have
+            <i>o</i>(√<i>u</i>) residue-order plateaux. The same coordinates
+            recover Knight’s mechanical-word exclusion, and a separate
+            argument excludes every singleton bridge candidate whenever
+            1≤<i>u</i>&lt;<i>n</i> and
+            2<sup><i>n</i></sup>&gt;3<sup><i>u</i></sup>.
           </p>
           <div class="paper-links">
             <a href="paper/collatz-boundary-paper.pdf">Download PDF</a>
@@ -105,7 +144,7 @@
           <p class="eyebrow">Construction</p>
           <h2 id="coordinates-title">From parity word to sparse boundary</h2>
           <p>
-            Four exact transformations separate cyclic ambiguity, geometric
+            Exact transformations separate cyclic ambiguity, geometric
             displacement, arithmetic position, and boundary complexity.
           </p>
         </div>
@@ -136,12 +175,15 @@
 
       <section class="section example" aria-labelledby="example-title">
         <div class="section-heading narrow">
-          <p class="eyebrow">Running example</p>
-          <h2 id="example-title">The row (8, 5, 3)</h2>
+          <p class="eyebrow">Example</p>
+          <h2 id="example-title">The example (8, 5, 3)</h2>
           <p>
-            The mechanical reference word is <code>11011010</code>. The
-            canonically rooted comparison word <code>11101100</code> has bridge
-            <i>L</i>=(0,0,1,0,1,0).
+            Here (<i>n</i>,<i>u</i>,<i>z</i>)=(8,5,3), with
+            <i>z</i>=<i>n</i>−<i>u</i>. This small nonintegral example is used
+            only to illustrate the coordinate construction; it is not a
+            Collatz cycle. The mechanical reference word is
+            <code>11011010</code>. The canonically rooted comparison word
+            <code>11101100</code> has bridge <i>L</i>=(0,0,1,0,1,0).
           </p>
         </div>
 
@@ -166,13 +208,13 @@
 
       <section class="section companion" id="companion" aria-labelledby="companion-title">
         <div class="section-heading">
-          <p class="eyebrow">Exact companion</p>
-          <h2 id="companion-title">Reproduce the coordinates</h2>
+          <p class="eyebrow">Code companion</p>
+          <h2 id="companion-title">Coordinate reproduction</h2>
           <p>
             A small standard-library Python package validates an already rooted
-            legal bridge and computes every displayed coordinate in the running
-            example. It does not search for cycles or silently canonicalize an
-            arbitrary word.
+            legal bridge and computes every displayed coordinate in the
+            (8,5,3) example. It does not search for cycles or silently
+            canonicalize an arbitrary word.
           </p>
         </div>
 
@@ -204,13 +246,14 @@ K(L)=3</code></pre>
 
       <section class="section citation" id="citation" aria-labelledby="citation-title">
         <div class="section-heading">
-          <p class="eyebrow">Draft status</p>
+          <p class="eyebrow">Draft version</p>
           <h2 id="citation-title">Referencing this manuscript</h2>
         </div>
         <div class="citation-copy">
           <p>
             Aaron Kyle Solomon. “Polynomial Boundary Coordinates for Collatz
-            Cycles.” Unpublished manuscript, 2026.
+            Cycles.” Version 0.1.0, unpublished manuscript, 19 August 2026,
+            52 pp.
           </p>
           <p>
             This manuscript currently has no arXiv or journal identifier. It
@@ -226,6 +269,7 @@ K(L)=3</code></pre>
     <footer>
       <p>© 2026 Aaron Kyle Solomon. Manuscript and scholarly content: all rights reserved.</p>
       <p>Computational companion: <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU GPL v3 or later</a>.</p>
+      <p><a href="mailto:aaron@deerparkmonastery.org">aaron@deerparkmonastery.org</a></p>
     </footer>
   </body>
 </html>
