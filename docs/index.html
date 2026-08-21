@@ -30,13 +30,13 @@
     <main id="main">
       <section class="hero" id="top">
         <div class="hero-copy">
-          <p class="eyebrow">Working paper · Version 0.1.0 · 19 August 2026 · 52 pages · Unpublished · Not peer reviewed</p>
+          <p class="eyebrow">Working paper · Version 0.3.0 · 21 August 2026 · 52 pages · Unpublished · Not peer reviewed</p>
           <h1>Polynomial Boundary Coordinates for Collatz Cycles</h1>
           <p class="dek">
             This manuscript develops polynomial boundary coordinates for
             prescribed parity patterns of the shortcut Collatz map. Under the
             standing coprime positive-cycle hypotheses, these coordinates give
-            an exact criterion for integral realizability and an asymptotic
+            an exact criterion for integral realizability and an explicit
             lower bound on residue-order plateau complexity.
           </p>
           <p class="author">
@@ -49,23 +49,19 @@
         </div>
 
         <aside class="result-card" aria-labelledby="main-result-title">
-          <p class="card-label" id="main-result-title">Necessary asymptotic condition · Theorem 1.2</p>
-          <div class="display-math" aria-label="The limit inferior as j tends to infinity of K of L sub j divided by the square root of u sub j is at least the square root of log base 2 of 3">
-            lim inf<sub><i>j</i>→∞</sub>
-            <span class="math-fraction"><i>K</i>(<i>L</i><sub><i>j</i></sub>)/√<i>u</i><sub><i>j</i></sub></span>
-            ≥ √log<sub>2</sub>3
+          <p class="card-label" id="main-result-title">Quantitative plateau complexity · Theorem 1.2</p>
+          <div class="display-math" aria-label="K of L is at least the square root of log base 2 of 3 times the square root of u, minus big O of the square of log u">
+            <i>K</i>(<i>L</i>) ≥ √log<sub>2</sub>3 √<i>u</i> − <i>O</i>((log <i>u</i>)<sup>2</sup>)
           </div>
           <p>
-            For every sequence of nontrivial positive Collatz cycles with least
-            periods <i>n</i><sub><i>j</i></sub>, odd-member counts
-            <i>u</i><sub><i>j</i></sub>, gcd(<i>n</i><sub><i>j</i></sub>,
-            <i>u</i><sub><i>j</i></sub>)=1, and
-            <i>u</i><sub><i>j</i></sub>→∞, the canonical bridges
-            <i>L</i><sub><i>j</i></sub> satisfy this bound.
+            Every hypothetical nontrivial positive Collatz cycle with least
+            period <i>n</i>, odd-member count <i>u</i>, and
+            gcd(<i>n</i>,<i>u</i>)=1 satisfies an explicit finite lower bound
+            for its canonical bridge <i>L</i>.
           </p>
           <p>
-            Thus any sufficiently large cycle in the coprime regime would
-            require on the order of √<i>u</i> residue-order plateaux.
+            The displayed form is its uniform asymptotic consequence as
+            <i>u</i>→∞.
           </p>
         </aside>
       </section>
@@ -78,10 +74,10 @@
           gcd(<i>n</i>,<i>u</i>)=1, integral realizability is reduced to
           divisibility of the sparse boundary <i>Q</i><sub><i>L</i></sub> by
           2<i>X</i><sup><i>n</i>−<i>u</i></sup>−3 in
-          ℤ[<i>X</i>]/(<i>X</i><sup><i>u</i></sup>−2). Along any sequence of
-          hypothetical nontrivial positive cycles in this coprime regime with
-          <i>u</i>→∞, Theorem 1.2 gives the stated asymptotic lower bound on
-          <i>K</i>(<i>L</i>)/√<i>u</i>.
+          ℤ[<i>X</i>]/(<i>X</i><sup><i>u</i></sup>−2). For every hypothetical
+          nontrivial positive cycle in this coprime regime, Theorem 1.2 gives
+          an explicit finite lower bound for <i>K</i>(<i>L</i>), with leading
+          asymptotic term √log<sub>2</sub>3 √<i>u</i>.
         </p>
       </aside>
 
@@ -122,10 +118,10 @@
             becomes a tension between a sparse geometric boundary and a dense
             arithmetic quotient: long boundary gaps force 3-adic growth, while
             the bridge geometry gives a competing dyadic upper bound.
-            Combining these estimates yields
-            <i>K</i>(<i>L</i>)≥(√log<sub>2</sub>3−<i>o</i>(1))√<i>u</i>
-            along any sequence of hypothetical coprime positive cycles with
-            <i>u</i>→∞. Thus a large cycle cannot have
+            Combining these estimates yields the pointwise condition
+            <i>K</i>(<i>L</i>)≥√log<sub>2</sub>3 √<i>u</i>−<i>o</i>(√<i>u</i>)
+            for every hypothetical coprime positive cycle. Thus a large cycle
+            cannot have
             <i>o</i>(√<i>u</i>) residue-order plateaux. The same coordinates
             recover Knight’s mechanical-word exclusion, and a separate
             argument excludes every singleton bridge candidate whenever
@@ -213,7 +209,7 @@
           <p>
             A small standard-library Python package validates an already rooted
             legal bridge and computes every displayed coordinate in the
-            (8,5,3) example. It does not search for cycles or silently
+            (8,5,3) example. It does not search for cycles or
             canonicalize an arbitrary word.
           </p>
         </div>
@@ -230,7 +226,7 @@ collatz-boundary</code></pre>
             </p>
           </div>
           <div>
-            <h3>Verify</h3>
+            <h3>Verification</h3>
             <pre><code>w=11101100
 N(w)=251
 integrally realizable=False
@@ -239,7 +235,7 @@ H=(0, 1, 1, 0, 0)
 d=(2, 1, 1, 2, 2)
 coeff(Q_L)=(2, 0, 1, 0, -1)
 K(L)=3</code></pre>
-            <a class="text-link" href="https://github.com/aaronksolomon/collatz-boundary">Browse the source <span aria-hidden="true">→</span></a>
+            <a class="text-link" href="https://github.com/aaronksolomon/collatz-boundary">Source <span aria-hidden="true">→</span></a>
           </div>
         </div>
       </section>
@@ -247,12 +243,12 @@ K(L)=3</code></pre>
       <section class="section citation" id="citation" aria-labelledby="citation-title">
         <div class="section-heading">
           <p class="eyebrow">Draft version</p>
-          <h2 id="citation-title">Referencing this manuscript</h2>
+           <h2 id="citation-title">Referencing this manuscript</h2>
         </div>
         <div class="citation-copy">
           <p>
             Aaron Kyle Solomon. “Polynomial Boundary Coordinates for Collatz
-            Cycles.” Version 0.1.0, unpublished manuscript, 19 August 2026,
+            Cycles.” Version 0.3.0, unpublished manuscript, 21 August 2026,
             52 pp.
           </p>
           <p>

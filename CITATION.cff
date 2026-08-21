@@ -13,6 +13,8 @@ repository-code: "https://github.com/aaronksolomon/collatz-boundary"
 url: "https://aaronksolomon.github.io/collatz-boundary/"
 preferred-citation:
   type: article
+  version: 0.3.0
+  date-released: 2026-08-21
   authors:
     - family-names: Solomon
       given-names: Aaron Kyle
