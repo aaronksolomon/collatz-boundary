@@ -16,7 +16,7 @@ small computational companion here reproduces those constructions exactly.
 The manuscript is shared for scholarly review and has not undergone peer
 review.
 
-Current manuscript version: **0.3.0** (21 August 2026).
+Current manuscript version: **0.4.0** (21 August 2026).
 
 ## Reproduce the (8,5,3) example
 
