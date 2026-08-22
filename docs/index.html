@@ -30,14 +30,14 @@
     <main id="main">
       <section class="hero" id="top">
         <div class="hero-copy">
-          <p class="eyebrow">Working paper · Version 0.4.1 · 21 August 2026 · 52 pages · Unpublished · Not peer reviewed</p>
+          <p class="eyebrow">Working paper · Version 0.6.0 · 21 August 2026 · 53 pages · Unpublished · Not peer reviewed</p>
           <h1>Polynomial Boundary Coordinates for Collatz Cycles</h1>
           <p class="dek">
             This manuscript develops polynomial boundary coordinates for
             prescribed parity patterns of the shortcut Collatz map. Under the
             standing coprime positive-cycle hypotheses, these coordinates give
-            an exact criterion for integral realizability and an explicit
-            lower bound on residue-order plateau complexity.
+            an exact criterion for integral realizability and expose a tension
+            between 3-adic quotient growth and available dyadic boundary mass.
           </p>
           <p class="author">
             <span><a href="mailto:aaron@deerparkmonastery.org">Aaron Kyle Solomon</a> · Independent researcher</span>
@@ -54,14 +54,13 @@
             <i>K</i>(<i>L</i>) ≥ √log<sub>2</sub>3 √<i>u</i> − <i>O</i>((log <i>u</i>)<sup>2</sup>)
           </div>
           <p>
-            Every hypothetical nontrivial positive Collatz cycle with least
-            period <i>n</i>, odd-member count <i>u</i>, and
-            gcd(<i>n</i>,<i>u</i>)=1 satisfies an explicit finite lower bound
-            for its canonical bridge <i>L</i>.
+            With only <i>K</i>(<i>L</i>) occupied boundary sites, some quotient
+            recurrence gap is long enough to force substantial 3-adic growth.
+            Bridge geometry supplies the competing dyadic bound.
           </p>
           <p>
-            The displayed form is its uniform asymptotic consequence as
-            <i>u</i>→∞.
+            The displayed form is the resulting uniform complexity floor for
+            coprime hypothetical cycles as <i>u</i>→∞.
           </p>
         </aside>
       </section>
@@ -98,20 +97,24 @@
             <i>Q</i><sub><i>L</i></sub> is divisible by
             2<i>X</i><sup><i>n</i>−<i>u</i></sup>−3 in
             ℤ[<i>X</i>]/(<i>X</i><sup><i>u</i></sup>−2). When this holds, the
-            profile quotient recovers the odd orbit, while the boundary
-            quotient occupies every residue position. Integrality therefore
-            becomes a tension between a sparse geometric boundary and a dense
-            arithmetic quotient: long boundary gaps force 3-adic growth, while
-            the bridge geometry gives a competing dyadic upper bound.
-            Combining these estimates yields the uniform bound
+            profile quotient recovers the odd orbit and the boundary quotient
+            has full support. Integral realizability therefore turns a sparse
+            geometric boundary into a dense arithmetic response. Only the
+            <i>K</i>(<i>L</i>) occupied coefficients of
+            <i>Q</i><sub><i>L</i></sub> can interrupt the induced quotient
+            recurrence: a long intervening gap forces exponential 3-adic
+            growth, while the bridge geometry bounds the available dyadic
+            boundary mass and Laurent’s estimate controls the denominator
+            loss. Balancing these constraints yields the uniform bound
             <i>K</i>(<i>L</i>)≥√log<sub>2</sub>3 √<i>u</i>−<i>O</i>((log <i>u</i>)<sup>2</sup>)
-            for hypothetical coprime positive cycles as <i>u</i>→∞. Thus the
-            residue-order plateau count must grow on the square-root scale,
-            with only the stated logarithmic loss. The same coordinates
-            recover Knight’s mechanical-word exclusion, and a separate
-            argument excludes every singleton bridge candidate whenever
-            1≤<i>u</i>&lt;<i>n</i> and
-            2<sup><i>n</i></sup>&gt;3<sup><i>u</i></sup>.
+            for hypothetical coprime positive cycles as <i>u</i>→∞. Thus such
+            a cycle cannot lie in the low-boundary-complexity regime below the
+            square-root scale. The same coordinates recover Knight’s exclusion
+            of the upper-Christoffel parity class and exclude from positive
+            integer cycles every coprime canonical parity pattern obtained from
+            it by one internal adjacent swap 01↦10; the corresponding rooted
+            singleton exclusion applies to all possible nontrivial positive
+            integer cycles.
           </p>
           <div class="paper-links">
             <a href="paper/collatz-boundary-paper.pdf">Download PDF</a>
@@ -232,8 +235,8 @@ K(L)=3</code></pre>
         <div class="citation-copy">
           <p>
             Aaron Kyle Solomon. “Polynomial Boundary Coordinates for Collatz
-            Cycles.” Version 0.4.1, unpublished manuscript, 21 August 2026,
-            52 pp.
+            Cycles.” Version 0.6.0, unpublished manuscript, 21 August 2026,
+            53 pp.
           </p>
           <p>
             This manuscript currently has no arXiv or journal identifier. It
