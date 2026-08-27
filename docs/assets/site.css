@@ -538,3 +538,218 @@ footer p {
     scroll-behavior: auto;
   }
 }
+
+/* Restrained single-flow working-paper layout. */
+body {
+  background: #fbfaf7;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+main,
+footer {
+  width: min(800px, calc(100% - 2.5rem));
+  margin-inline: auto;
+}
+
+.hero {
+  width: auto;
+  margin: 0;
+  padding: 4rem 0 3.25rem;
+  display: block;
+}
+
+.metadata {
+  margin: 0 0 1.25rem;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 0.78rem;
+}
+
+h1 {
+  max-width: 720px;
+  font-size: clamp(1.95rem, 5.4vw, 2.45rem);
+  line-height: 1.12;
+}
+
+h2 {
+  font-size: clamp(1.45rem, 4vw, 1.75rem);
+  line-height: 1.2;
+}
+
+.author {
+  margin-top: 0.75rem;
+  font-size: 0.88rem;
+}
+
+.author span {
+  font-weight: inherit;
+}
+
+.dek {
+  max-width: 680px;
+  margin: 1.5rem 0 0;
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+.document-links {
+  display: flex;
+  gap: 0.4rem 0.75rem;
+  margin: 1.25rem 0 0;
+  font-family: var(--sans);
+  font-size: 0.84rem;
+}
+
+.section,
+.abstract,
+.citation {
+  padding: 2.75rem 0;
+  display: block;
+  border-top: 1px solid var(--rule);
+  background: transparent;
+}
+
+.section-heading {
+  margin-bottom: 1.75rem;
+}
+
+.abstract-text,
+.citation-copy {
+  max-width: 760px;
+}
+
+.citation-copy {
+  padding: 0;
+  border-left: 0;
+}
+
+.coordinate-chain {
+  display: block;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.coordinate-chain li {
+  min-height: 0;
+  padding: 0.9rem 0;
+  display: grid;
+  grid-template-columns: 2.3rem 10rem minmax(0, 1fr);
+  gap: 0.5rem 1rem;
+  border-top: 1px solid var(--rule);
+  background: transparent;
+}
+
+.coordinate-chain li:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+
+.coordinate-chain h3 {
+  margin: 0;
+}
+
+.coordinate-chain p {
+  font-size: 0.94rem;
+}
+
+.step-number {
+  color: var(--muted);
+  letter-spacing: 0;
+}
+
+.example-calculation {
+  margin: 2.25rem 0;
+  padding: 1.15rem 0;
+  border-block: 1px solid var(--rule);
+}
+
+.example-calculation p:first-child {
+  margin-top: 0;
+}
+
+.example-calculation p:last-child {
+  margin-bottom: 0;
+}
+
+.equation-line {
+  overflow-x: auto;
+  color: #303b41;
+  font-size: 1.02rem;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.equation-chain {
+  line-height: 2;
+}
+
+figure {
+  margin-top: 2.25rem;
+}
+
+.companion {
+  color: var(--ink);
+  background: transparent;
+}
+
+.code-grid {
+  gap: 1.5rem;
+}
+
+.code-grid h3 {
+  font-family: var(--serif);
+  font-size: 1.02rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+pre {
+  padding: 1rem;
+  border-color: var(--rule);
+  color: var(--ink);
+  background: #f1f0ec;
+  font-size: 0.75rem;
+}
+
+.code-note {
+  color: var(--muted);
+}
+
+footer {
+  padding: 1.75rem 0 2.5rem;
+  display: block;
+  border-top: 1px solid var(--rule);
+}
+
+footer p {
+  margin: 0.25rem 0;
+}
+
+@media (max-width: 620px) {
+  main,
+  footer {
+    width: min(100% - 2rem, 800px);
+  }
+
+  .hero {
+    width: auto;
+    padding: 2.75rem 0 2.5rem;
+  }
+
+  h1 {
+    font-size: clamp(1.8rem, 9vw, 2.2rem);
+  }
+
+  .section {
+    padding: 2.25rem 0;
+  }
+
+  .coordinate-chain li {
+    grid-template-columns: 2rem minmax(0, 1fr);
+  }
+
+  .coordinate-chain p {
+    grid-column: 2;
+  }
+}

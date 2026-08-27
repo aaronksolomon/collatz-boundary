@@ -5,75 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="An unpublished working paper developing polynomial boundary coordinates and a plateau-complexity condition for hypothetical Collatz cycles.">
     <meta property="og:title" content="Polynomial Boundary Coordinates for Collatz Cycles">
-    <meta property="og:description" content="An unpublished manuscript by Aaron Kyle Solomon, shared for scholarly review with an exact computational companion.">
+    <meta property="og:description" content="An unpublished working paper by Aaron Kyle Solomon, with source code for the displayed example.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://aaronksolomon.github.io/collatz-boundary/">
-    <meta property="og:image" content="https://aaronksolomon.github.io/collatz-boundary/assets/canonical-bridge.png">
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="summary">
     <title>Polynomial Boundary Coordinates for Collatz Cycles — Aaron Kyle Solomon</title>
     <link rel="stylesheet" href="assets/site.css">
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
 
-    <header class="site-header">
-      <a class="site-title" href="#top">Polynomial boundary coordinates</a>
-      <nav aria-label="Primary navigation">
-        <a href="paper/collatz-boundary-paper.pdf">PDF</a>
-        <a href="#paper">Abstract</a>
-        <a href="#coordinates">Coordinates</a>
-        <a href="#companion">Code</a>
-        <a href="https://github.com/aaronksolomon/collatz-boundary">GitHub</a>
-      </nav>
-    </header>
-
     <main id="main">
       <section class="hero" id="top">
-        <div class="hero-copy">
-          <p class="eyebrow">Working paper · Version 0.10.0 · 26 August 2026 · 53 pages · Unpublished · Not peer reviewed</p>
-          <h1>Polynomial Boundary Coordinates for Collatz Cycles</h1>
-          <p class="dek">
-            This manuscript develops polynomial boundary coordinates for
-            prescribed parity patterns of the shortcut Collatz map. Under the
-            standing coprime positive-cycle hypotheses, these coordinates give
-            an exact criterion for integral realizability and expose a tension
-            between 3-adic quotient growth and the bridge-geometric upper bound
-            on the sum of absolute boundary coefficients.
-          </p>
-          <p class="author">
-            <span><a href="mailto:aaron@deerparkmonastery.org">Aaron Kyle Solomon</a> · Independent researcher</span>
-          </p>
-          <div class="actions">
-            <a class="button primary" href="paper/collatz-boundary-paper.pdf">Manuscript <span aria-hidden="true">↗</span></a>
-            <a class="button secondary" href="#companion">Code example</a>
-          </div>
-        </div>
-
-        <aside class="result-card" aria-labelledby="main-result-title">
-          <p class="card-label" id="main-result-title">Boundary support must grow · Theorem 1.2</p>
-          <div class="display-math" aria-label="K of L is at least the square root of log base 2 of 3 times the square root of u, minus big O of the square of log u">
-            <i>K</i>(<i>L</i>) ≥ √log<sub>2</sub>3 √<i>u</i> − <i>O</i>((log <i>u</i>)<sup>2</sup>)
-          </div>
-          <p>
-            For a hypothetical positive Collatz cycle with coprime length and
-            odd-step count, <i>u</i> counts its odd steps, while
-            <i>K</i>(<i>L</i>) is the support size of its boundary polynomial—the
-            number of nonzero coefficients. The theorem forces this support to
-            grow at least on the square-root scale in <i>u</i>.
-          </p>
-          <p>
-            Too few occupied sites leave a long gap, forcing 3-adic quotient
-            growth beyond the competing upper bound on the sum of absolute
-            boundary coefficients.
-          </p>
-        </aside>
+        <p class="metadata">Working paper · Version 0.10.0 · 26 August 2026 · Not peer reviewed</p>
+        <h1>Polynomial Boundary Coordinates for Collatz Cycles</h1>
+        <p class="author"><a href="mailto:aaron@deerparkmonastery.org">Aaron Kyle Solomon</a></p>
+        <p class="dek">
+          A study of restrictions on candidate parity patterns for positive
+          integer cycles of the shortcut Collatz map. When the pattern length
+          and number of odd symbols are coprime, polynomial boundary coordinates
+          express integral realizability as a divisibility condition and give a
+          square-root-scale lower bound on boundary support. The analysis also
+          recovers Knight’s high-cycle exclusion and rules out every word
+          obtained from the mechanical word by a single adjacent
+          <code>01</code>→<code>10</code> swap.
+        </p>
+        <p class="document-links">
+          <a href="paper/collatz-boundary-paper.pdf">PDF</a>
+          <span aria-hidden="true">·</span>
+          <a href="https://github.com/aaronksolomon/collatz-boundary">Source code</a>
+        </p>
       </section>
 
       <section class="abstract section" id="paper" aria-labelledby="abstract-title">
-        <div class="section-heading">
-          <p class="eyebrow">Manuscript</p>
-          <h2 id="abstract-title">Abstract</h2>
-        </div>
+        <h2 id="abstract-title">Abstract</h2>
         <div class="abstract-text">
           <p>
             This paper studies arithmetic obstructions to realizing prescribed
@@ -131,79 +96,115 @@
 
       <section class="section coordinates" id="coordinates" aria-labelledby="coordinates-title">
         <div class="section-heading">
-          <p class="eyebrow">Construction</p>
-          <h2 id="coordinates-title">From parity word to sparse boundary</h2>
+          <h2 id="coordinates-title">From a parity word to its boundary polynomial</h2>
           <p>
-            Exact transformations separate cyclic ambiguity, geometric
-            displacement, arithmetic position, and boundary complexity.
+            In the coprime setting, the construction passes from a cyclic
+            parity word to a sparse polynomial in four steps.
           </p>
         </div>
 
         <ol class="coordinate-chain">
           <li>
             <span class="step-number">01</span>
-            <h3>Canonical bridge</h3>
-            <p>Root the cyclic word uniquely below its balanced mechanical reference and record the vertical displacement <i>L</i>.</p>
+            <h3>Canonical root and bridge</h3>
+            <p>Select the unique rotation lying below the balanced mechanical reference. Their vertical separation records the bridge.</p>
           </li>
           <li>
             <span class="step-number">02</span>
             <h3>Residue order</h3>
-            <p>Use <i>r</i><sub>t</sub>=(<i>n−u</i>)<i>t</i> mod <i>u</i> to place every odd phase on the arithmetic exponent scale.</p>
+            <p>Place the powers of two and three in the cycle numerator on a common exponent scale, then order the bridge heights by the resulting residues. Coprimality ensures that every odd phase occurs exactly once.</p>
           </li>
           <li>
             <span class="step-number">03</span>
             <h3>Dyadic profile</h3>
-            <p>Convert reordered bridge heights into positive powers of two; constant height intervals become literal plateaux.</p>
+            <p>Translate the reordered bridge heights into powers of two. Consecutive equal values form constant intervals, or plateaux.</p>
           </li>
           <li>
             <span class="step-number">04</span>
-            <h3>Sparse boundary</h3>
-            <p>Take the reduced discrete boundary in ℤ[<i>X</i>]/(<i>X</i><sup>u</sup>−2). Its support size is exactly the plateau count.</p>
+            <h3>Boundary polynomial</h3>
+            <p>Take the reduced discrete boundary of the profile. The resulting polynomial has one nonzero coefficient for each plateau and retains the profile information.</p>
           </li>
         </ol>
       </section>
 
       <section class="section example" aria-labelledby="example-title">
         <div class="section-heading narrow">
-          <p class="eyebrow">Example</p>
           <h2 id="example-title">Example (8, 5, 3)</h2>
           <p>
             Here (<i>n</i>,<i>u</i>,<i>z</i>)=(8,5,3), with
-            <i>z</i>=<i>n</i>−<i>u</i>. This small nonintegral example is used
-            only to illustrate the coordinate construction. The mechanical reference word is
-            <code>11011010</code>. The canonically rooted comparison word
-            <code>11101100</code> has bridge <i>L</i>=(0,0,1,0,1,0).
+            <i>z</i>=<i>n</i>−<i>u</i>. For this small nonintegral illustration of
+            the coordinate construction, we take the arrangement
+            <code>11101100</code> of five ones and three zeros. Its cyclic class
+            includes other rotations, such as
+            <code>11001110</code>. The rotation <code>11101100</code> is
+            canonical because, before each successive <code>1</code>, it has
+            encountered no more zeros than the mechanical reference word
+            <code>11011010</code>. By contrast, <code>11001110</code> fails
+            before its third <code>1</code>: it has already encountered two
+            zeros, while the mechanical reference has encountered one. At each
+            odd phase, the difference between these cumulative zero counts is
+            the bridge height; for the canonical rotation,
+            <i>L</i>=(0,0,1,0,1,0).
           </p>
         </div>
 
         <figure>
           <img src="assets/canonical-bridge.png" width="2400" height="1000" loading="lazy" alt="The cumulative path of the rooted word 11101100 lies weakly below the mechanical path for the row n equals 8, u equals 5. Their vertical separation gives bridge heights zero, zero, one, zero, one, zero.">
           <figcaption>
-            The mechanical path and the canonically rooted cumulative zero
-            path. Their exact vertical separation is the bridge.
+            Cumulative zero counts plotted by odd phase. The canonical
+            comparison remains weakly below the mechanical reference, and
+            their exact vertical separation is the bridge.
           </figcaption>
         </figure>
+
+        <div class="example-calculation">
+          <p>
+            Since <i>z</i>=3, the residue labels in odd-phase order are
+            3<i>t</i> mod 5=(0,3,1,4,2). Increasing residue order therefore
+            reads the phases as <i>t</i>=(0,2,4,1,3), so the corresponding
+            bridge heights are <i>H</i>=(0,1,1,0,0). Their maximum is
+            <i>M</i>=1, and the dyadic profile values are therefore
+          </p>
+          <p class="equation-line">
+            <i>d</i><sub><i>r</i></sub>=2<sup>1−<i>H</i><sub><i>r</i></sub></sup>,
+            &emsp;<i>d</i>=(2,1,1,2,2).
+          </p>
+          <p>
+            Writing these coefficients in reverse residue powers gives the
+            profile polynomial
+          </p>
+          <p class="equation-line">
+            <i>V</i><sub><i>L</i></sub>(<i>X</i>)
+            =2<i>X</i><sup>4</sup>+<i>X</i><sup>3</sup>+<i>X</i><sup>2</sup>+2<i>X</i>+2.
+          </p>
+          <p>
+            Its reduced discrete boundary is obtained by multiplying by
+            <i>X</i>−1 and then using <i>X</i><sup>5</sup>=2:
+          </p>
+          <p class="equation-line equation-chain">
+            <i>Q</i><sub><i>L</i></sub>(<i>X</i>)
+            =[(<i>X</i>−1)<i>V</i><sub><i>L</i></sub>(<i>X</i>)]<sub><i>X</i><sup>5</sup>=2</sub><br>
+            =[2<i>X</i><sup>5</sup>−<i>X</i><sup>4</sup>+<i>X</i><sup>2</sup>−2]<sub><i>X</i><sup>5</sup>=2</sub><br>
+            =2+<i>X</i><sup>2</sup>−<i>X</i><sup>4</sup>.
+          </p>
+        </div>
 
         <figure>
           <img src="assets/profile-boundary.png" width="2400" height="1000" loading="lazy" alt="The residue-ordered dyadic profile has coefficient values two, one, one, two, two and three constant intervals. Its reduced boundary has coefficients two, zero, one, zero, minus one.">
           <figcaption>
-            Residue reordering gives the dyadic profile
-            <i>d</i>=(2,1,1,2,2) and boundary
-            <i>Q</i><sub>L</sub>=2+<i>X</i><sup>2</sup>−<i>X</i><sup>4</sup>,
-            with three occupied coefficients and three plateaux.
+            The dyadic profile has three plateaux, and its boundary has three
+            occupied coefficients—one for each plateau.
           </figcaption>
         </figure>
       </section>
 
       <section class="section companion" id="companion" aria-labelledby="companion-title">
         <div class="section-heading">
-          <p class="eyebrow">Code companion</p>
-          <h2 id="companion-title">Coordinate reproduction</h2>
+          <h2 id="companion-title">Code companion</h2>
           <p>
             A small standard-library Python package validates an already rooted
             legal bridge and computes every displayed coordinate in the
-            (8,5,3) example. It does not search for cycles or
-            canonicalize an arbitrary word.
+            (8,5,3) example.
           </p>
         </div>
 
@@ -234,10 +235,7 @@ K(L)=3</code></pre>
       </section>
 
       <section class="section citation" id="citation" aria-labelledby="citation-title">
-        <div class="section-heading">
-          <p class="eyebrow">Draft version</p>
-          <h2 id="citation-title">Reference</h2>
-        </div>
+        <h2 id="citation-title">Reference</h2>
         <div class="citation-copy">
           <p>
             Aaron Kyle Solomon. “Polynomial Boundary Coordinates for Collatz
