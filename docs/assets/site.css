@@ -195,7 +195,7 @@ h1 {
 
 .result-card p:not(.card-label) {
   color: #42515a;
-  font-size: 0.94rem;
+  font-size: 0.9rem;
 }
 
 .result-card p:last-child {

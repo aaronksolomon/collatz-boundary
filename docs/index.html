@@ -37,7 +37,8 @@
             prescribed parity patterns of the shortcut Collatz map. Under the
             standing coprime positive-cycle hypotheses, these coordinates give
             an exact criterion for integral realizability and expose a tension
-            between 3-adic quotient growth and available dyadic boundary mass.
+            between 3-adic quotient growth and the bridge-geometric upper bound
+            on the sum of absolute boundary coefficients.
           </p>
           <p class="author">
             <span><a href="mailto:aaron@deerparkmonastery.org">Aaron Kyle Solomon</a> · Independent researcher</span>
@@ -49,18 +50,21 @@
         </div>
 
         <aside class="result-card" aria-labelledby="main-result-title">
-          <p class="card-label" id="main-result-title">Quantitative plateau complexity · Theorem 1.2</p>
+          <p class="card-label" id="main-result-title">Boundary support must grow · Theorem 1.2</p>
           <div class="display-math" aria-label="K of L is at least the square root of log base 2 of 3 times the square root of u, minus big O of the square of log u">
             <i>K</i>(<i>L</i>) ≥ √log<sub>2</sub>3 √<i>u</i> − <i>O</i>((log <i>u</i>)<sup>2</sup>)
           </div>
           <p>
-            With only <i>K</i>(<i>L</i>) occupied boundary sites, some quotient
-            recurrence gap is long enough to force substantial 3-adic growth.
-            Bridge geometry supplies the competing dyadic bound.
+            For a hypothetical positive Collatz cycle with coprime length and
+            odd-step count, <i>u</i> counts its odd steps, while
+            <i>K</i>(<i>L</i>) is the support size of its boundary polynomial—the
+            number of nonzero coefficients. The theorem forces this support to
+            grow at least on the square-root scale in <i>u</i>.
           </p>
           <p>
-            The displayed form is the resulting uniform complexity floor for
-            coprime hypothetical cycles as <i>u</i>→∞.
+            Too few occupied sites leave a long gap, forcing 3-adic quotient
+            growth beyond the competing upper bound on the sum of absolute
+            boundary coefficients.
           </p>
         </aside>
       </section>
@@ -104,9 +108,10 @@
             <i>K</i>(<i>L</i>) occupied coefficients of
             <i>Q</i><sub><i>L</i></sub> can interrupt the induced quotient
             recurrence: a long intervening gap forces exponential 3-adic
-            growth, while the bridge geometry bounds the available dyadic
-            boundary mass and Laurent’s estimate controls the denominator
-            loss. Balancing these constraints yields the uniform bound
+            growth, while bridge geometry bounds the sum of the absolute
+            boundary coefficients in terms of <i>K</i>(<i>L</i>) and Laurent’s
+            estimate controls the denominator loss.
+            Balancing these constraints yields the uniform bound
             <i>K</i>(<i>L</i>)≥√log<sub>2</sub>3 √<i>u</i>−<i>O</i>((log <i>u</i>)<sup>2</sup>)
             for hypothetical coprime positive cycles as <i>u</i>→∞. Thus such
             a cycle cannot lie in the low-boundary-complexity regime below the
