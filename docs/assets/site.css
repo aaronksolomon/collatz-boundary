@@ -624,6 +624,14 @@ h2 {
   border-left: 0;
 }
 
+.provenance p {
+  max-width: 740px;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
 .coordinate-chain {
   display: block;
   margin: 0;
