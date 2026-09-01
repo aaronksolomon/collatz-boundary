@@ -3,11 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="An unpublished working paper developing polynomial boundary coordinates and a plateau-complexity condition for hypothetical Collatz cycles.">
+    <meta name="description" content="A working paper developing polynomial boundary coordinates and a plateau-complexity condition for hypothetical Collatz cycles.">
     <meta property="og:title" content="Polynomial Boundary Coordinates for Collatz Cycles">
-    <meta property="og:description" content="An unpublished working paper by Aaron Kyle Solomon, with source code for the displayed example.">
+    <meta property="og:description" content="A Zenodo working paper by Aaron Kyle Solomon, with source code for the displayed example.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://aaronksolomon.github.io/collatz-boundary/">
+    <meta name="citation_title" content="Polynomial Boundary Coordinates for Collatz Cycles">
+    <meta name="citation_author" content="Aaron Kyle Solomon">
+    <meta name="citation_publication_date" content="2026-08-28">
+    <meta name="citation_doi" content="10.5281/zenodo.22220730">
+    <meta name="citation_pdf_url" content="https://aaronksolomon.github.io/collatz-boundary/paper/collatz-boundary-paper.pdf">
     <meta name="twitter:card" content="summary">
     <title>Polynomial Boundary Coordinates for Collatz Cycles — Aaron Kyle Solomon</title>
     <link rel="stylesheet" href="assets/site.css">
@@ -17,23 +22,23 @@
 
     <main id="main">
       <section class="hero" id="top">
-        <p class="metadata">Working paper · Version 0.11.1 · 27 August 2026 · Not peer reviewed</p>
+        <p class="metadata">Working paper · Version 0.11.2 · 28 August 2026 · Not peer reviewed</p>
         <h1>Polynomial Boundary Coordinates for Collatz Cycles</h1>
         <p class="author"><a href="mailto:aaron@deerparkmonastery.org">Aaron Kyle Solomon</a></p>
         <p class="dek">
-          A study of restrictions on candidate parity patterns for positive
-          integer cycles of the shortcut Collatz map. When the pattern length
+          Restrictions on candidate parity patterns for positive
+          integer cycles of the shortcut Collatz map: when the pattern length
           and number of odd symbols are coprime, polynomial boundary coordinates
           express integral realizability as a divisibility condition and give a
-          square-root-scale lower bound on boundary support. The analysis also
+          square-root-scale lower bound on boundary support. The analysis
           recovers Knight’s high-cycle exclusion and rules out every word
           obtained from the mechanical word by a single adjacent
           <code>01</code>→<code>10</code> swap.
         </p>
         <p class="document-links">
-          <a href="paper/collatz-boundary-paper.pdf">PDF</a>
-          <span aria-hidden="true">·</span>
-          <a href="https://github.com/aaronksolomon/collatz-boundary">Source code</a>
+          <a class="button primary" href="paper/collatz-boundary-paper.pdf">Manuscript</a>
+          <a class="button secondary" href="https://doi.org/10.5281/zenodo.22220730">DOI</a>
+          <a class="button secondary" href="https://github.com/aaronksolomon/collatz-boundary">Source code</a>
         </p>
       </section>
 
@@ -47,8 +52,11 @@
             binary parity word of length <i>n</i> with <i>u</i> odd symbols
             determines a rational periodic orbit, but the standard numerator
             formula does not reveal how the arrangement of those symbols
-            affects integrality. The construction is developed in the positive
-            cycle-relevant range <i>u</i>&lt;<i>n</i>&lt;2<i>u</i> and
+            affects integrality. Toward characterizing this dependence, we
+            develop coordinates that measure a prescribed parity pattern
+            relative to the corresponding upper-Christoffel mechanical word.
+            The construction is developed in the positive cycle-relevant range
+            <i>u</i>&lt;<i>n</i>&lt;2<i>u</i> and
             2<sup><i>n</i></sup>&gt;3<sup><i>u</i></sup>. Under the additional
             condition gcd(<i>n</i>,<i>u</i>)=1, the map
             <i>t</i>↦(<i>n</i>−<i>u</i>)<i>t</i> mod <i>u</i> permutes the
@@ -89,6 +97,7 @@
           </p>
           <div class="paper-links">
             <a href="paper/collatz-boundary-paper.pdf">Download PDF</a>
+            <a href="https://doi.org/10.5281/zenodo.22220730">Zenodo record</a>
             <a href="#citation">Reference this draft</a>
           </div>
         </div>
@@ -260,13 +269,12 @@ K(L)=3</code></pre>
         <div class="citation-copy">
           <p>
             Aaron Kyle Solomon. “Polynomial Boundary Coordinates for Collatz
-            Cycles.” Version 0.11.1, unpublished manuscript, 27 August 2026,
-            53 pp.
+            Cycles.” Version 0.11.2, Zenodo working paper, 28 August 2026,
+            53 pp. <a href="https://doi.org/10.5281/zenodo.22220730">doi:10.5281/zenodo.22220730</a>.
           </p>
           <p>
-            This manuscript currently has no arXiv or journal identifier. It
-            is being shared for scholarly review, and mathematical feedback
-            is welcome.
+            This manuscript has not undergone peer review and currently has no
+            arXiv or journal identifier. Mathematical feedback is welcome.
             Repository metadata is provided in
             <a href="https://github.com/aaronksolomon/collatz-boundary/blob/main/CITATION.cff"><code>CITATION.cff</code></a>.
           </p>

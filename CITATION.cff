@@ -13,11 +13,13 @@ repository-code: "https://github.com/aaronksolomon/collatz-boundary"
 url: "https://aaronksolomon.github.io/collatz-boundary/"
 preferred-citation:
   type: article
-  version: 0.11.1
-  date-released: 2026-08-27
+  version: 0.11.2
+  date-released: 2026-08-28
   authors:
     - family-names: Solomon
       given-names: Aaron Kyle
   title: "Polynomial Boundary Coordinates for Collatz Cycles"
+  doi: "10.5281/zenodo.22220730"
+  url: "https://doi.org/10.5281/zenodo.22220730"
   year: 2026
-  notes: "Unpublished manuscript; no arXiv identifier assigned"
+  notes: "Zenodo working paper; not peer reviewed; no arXiv identifier assigned"

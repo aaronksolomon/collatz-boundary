@@ -1,6 +1,6 @@
 # Collatz Boundary
 
-This repository accompanies the unpublished manuscript **Polynomial Boundary
+This repository accompanies the working paper **Polynomial Boundary
 Coordinates for Collatz Cycles** by Aaron Kyle Solomon.
 
 The manuscript develops exact coordinates for prescribed Collatz parity patterns:
@@ -12,11 +12,12 @@ small computational companion here reproduces those constructions exactly.
 
 - [Project website](https://aaronksolomon.github.io/collatz-boundary/)
 - [Manuscript PDF](https://aaronksolomon.github.io/collatz-boundary/paper/collatz-boundary-paper.pdf)
+- [Zenodo DOI](https://doi.org/10.5281/zenodo.22220730)
 
 The manuscript is shared for scholarly review and has not undergone peer
 review.
 
-Current manuscript version: **0.11.1** (27 August 2026).
+Current manuscript version: **0.11.2** (28 August 2026).
 
 ## Reproduce the (8,5,3) example
 
