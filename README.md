@@ -12,7 +12,7 @@ small computational companion here reproduces those constructions exactly.
 
 - [Project website](https://aaronksolomon.github.io/collatz-boundary/)
 - [Manuscript PDF](https://aaronksolomon.github.io/collatz-boundary/paper/collatz-boundary-paper.pdf)
-- [Zenodo DOI](https://doi.org/10.5281/zenodo.22220730)
+- [Zenodo DOI](https://doi.org/10.5281/zenodo.22220729)
 
 The manuscript is shared for scholarly review and has not undergone peer
 review.
